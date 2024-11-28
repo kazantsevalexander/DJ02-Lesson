@@ -1,0 +1,10 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}Главная{% endblock %}
+{% block content %}
+<h1 class="text-center">Добро пожаловать на BirdCatDjango!</h1>
+<p class="text-center">Это главная страница нашего сайта.</p>
+<div class="text-center mt-4">
+    <img src="{% static 'main/img/bird.jpg' %}" alt="Птичка" class="img-fluid rounded" style="max-width: 300px;">
+</div>
+{% endblock %}
