@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 def home(request):
-    return render(request, 'main/home.html')
+    return render(request, 'main/index.html')
 
 def secondary(request):
     return render(request, 'main/secondary.html')
