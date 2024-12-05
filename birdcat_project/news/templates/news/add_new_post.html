@@ -1,0 +1,29 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}Страница для добовления новостей{% endblock %}
+
+{% block content %}
+<h1>Страница для добовления новостей</h1>
+
+<div>
+    <form method="post" class="container mt-4 p-4 border rounded shadow">
+        {% csrf_token %}
+        <h2 class="mb-4">Добавить новость</h2>
+        <div class="mb-3">
+            {{form.title}}
+        </div>
+        <div class="mb-3">
+            {{form.short_description}}
+        </div>
+        <div class="mb-3">
+            {{form.text}}
+        </div>
+        <div class="mb-3">
+            {{form.date}}
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Добавить новость</button>
+    </form>
+    <p>{{error}}</p>
+</div>
+
+{% endblock %}
